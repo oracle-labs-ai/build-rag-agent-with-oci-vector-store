@@ -1,0 +1,11 @@
+
+httpx==0.28.1
+langchain==1.4.6
+langchain-core==1.6.12
+langchain-openai==1.7.2
+langchain-protocol==0.0.19
+langgraph==1.2.16
+oci==2.188.0
+oci-openai==1.1.0
+openai>=2.6.1,<3
+python-dotenv==1.2.4
