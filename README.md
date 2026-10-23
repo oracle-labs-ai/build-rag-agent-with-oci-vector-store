@@ -186,18 +186,18 @@ Puedes borrar `test_oci.py` cuando termines.
 
 ### Problemas frecuentes
 
-**`KeyError: 'OCI_COMPARTMENT_ID'` (u otra variable).** El notebook no lee el `.env`. Verifica que se llame exactamente `.env`, que esté en la misma carpeta que `notebook.ipynb`, que el nombre de la variable esté bien escrito y que hayas reiniciado el kernel.
+- **`KeyError: 'OCI_COMPARTMENT_ID'` (u otra variable).** El notebook no lee el `.env`. Verifica que se llame exactamente `.env`, que esté en la misma carpeta que `notebook.ipynb`, que el nombre de la variable esté bien escrito y que hayas reiniciado el kernel.
 
-**`ConfigFileNotFound`.** El archivo `config` no está en `<tu-usuario>\.oci\` o se guardó con otra extensión. Vuelve a guardarlo con **File > Save As...** con el nombre exacto `config`.
+- **`ConfigFileNotFound`.** El archivo `config` no está en `<tu-usuario>\.oci\` o se guardó con otra extensión. Vuelve a guardarlo con **File > Save As...** con el nombre exacto `config`.
 
-**`InvalidConfig: {'fingerprint': 'malformed'}`.** El `fingerprint` conserva el texto de ejemplo, se copió incompleto o tiene comillas. Cópialo de nuevo desde **My profile > API keys**.
+- **`InvalidConfig: {'fingerprint': 'malformed'}`.** El `fingerprint` conserva el texto de ejemplo, se copió incompleto o tiene comillas. Cópialo de nuevo desde **My profile > API keys**.
 
-**`TypeError: Invalid "auth" argument`.** Se instaló `openai` 3.x. Revisa que `requirements.txt` incluya `openai>=2.6.1,<3`, vuelve a crear el ambiente y reinicia el kernel.
+- **`TypeError: Invalid "auth" argument`.** Se instaló `openai` 3.x. Revisa que `requirements.txt` incluya `openai>=2.6.1,<3`, vuelve a crear el ambiente y reinicia el kernel.
 
-**Python 3.14 no aparece al crear el ambiente.** Reinicia VS Code después de instalar Python, o selecciona el intérprete manualmente con **Enter interpreter path...**.
+- **Python 3.14.x no aparece al crear el ambiente.** Reinicia VS Code después de instalar Python, o selecciona el intérprete manualmente con **Enter interpreter path...**.
 
-**`Vector creation failed`.** Es un mensaje genérico de la consola, y la causa más probable son los permisos. Pide a tu administrador una política como `allow group <your-group> to manage generative-ai-family in compartment <your-compartment>` y, para datos no estructurados, el dynamic group y la política de Object Storage que describe la guía *QuickStart Permissions for Developing Agents* de la documentación de OCI. Puedes consultar el detalle del fallo en **Governance & Administration > Work requests**.
+- **`Vector creation failed`.** Es un mensaje genérico de la consola, y la causa más probable son los permisos. Pide a tu administrador una política como `allow group <your-group> to manage generative-ai-family in compartment <your-compartment>` y, para datos no estructurados, el dynamic group y la política de Object Storage que describe la guía *QuickStart Permissions for Developing Agents* de la documentación de OCI. Puedes consultar el detalle del fallo en **Governance & Administration > Work requests**.
 
-**`NameError: name 'VECTOR_STORE_ID' is not defined`.** Se ejecutó una celda sin haber ejecutado antes las anteriores. Ejecuta el notebook en orden, desde la primera celda.
+- **`NameError: name 'VECTOR_STORE_ID' is not defined`.** Se ejecutó una celda sin haber ejecutado antes las anteriores. Ejecuta el notebook en orden, desde la primera celda.
 
-**`NotAuthorizedOrNotFound`.** Revisa que la región, el compartment, el proyecto y el ID del vector store coincidan entre sí.
+- **`NotAuthorizedOrNotFound`.** Revisa que la región, el compartment, el proyecto y el ID del vector store coincidan entre sí.
